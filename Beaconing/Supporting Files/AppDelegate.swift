@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AppDelegate.swift
 //  Beaconing
 //
 //  Created by Samar Sunkaria on 12/24/18.
@@ -14,20 +14,20 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Insert code here to initialize your application
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
     }
 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 
 }
 

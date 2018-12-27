@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		3010573921D1650D003A4828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010573821D1650D003A4828 /* AppDelegate.swift */; };
-		3010573B21D1650D003A4828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010573A21D1650D003A4828 /* ViewController.swift */; };
+		3010573B21D1650D003A4828 /* BeaconsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010573A21D1650D003A4828 /* BeaconsController.swift */; };
 		3010573D21D1650F003A4828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3010573C21D1650F003A4828 /* Assets.xcassets */; };
 		3010574021D1650F003A4828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3010573E21D1650F003A4828 /* Main.storyboard */; };
+		307AA37521D4094500053181 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA37421D4094500053181 /* Beacon.swift */; };
+		307AA37721D4098600053181 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA37621D4098600053181 /* FoundationExtensions.swift */; };
+		307AA37921D40A8100053181 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA37821D40A8100053181 /* BeaconManager.swift */; };
+		307AA37B21D42E4200053181 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA37A21D42E4200053181 /* WindowController.swift */; };
+		307AA37D21D56E3300053181 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA37C21D56E3300053181 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3010573521D1650D003A4828 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3010573821D1650D003A4828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3010573A21D1650D003A4828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3010573A21D1650D003A4828 /* BeaconsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconsController.swift; sourceTree = "<group>"; };
 		3010573C21D1650F003A4828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3010573F21D1650F003A4828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3010574121D1650F003A4828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3010574221D1650F003A4828 /* Beaconing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beaconing.entitlements; sourceTree = "<group>"; };
+		307AA37421D4094500053181 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		307AA37621D4098600053181 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		307AA37821D40A8100053181 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
+		307AA37A21D42E4200053181 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		307AA37C21D56E3300053181 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +63,43 @@
 		3010573721D1650D003A4828 /* Beaconing */ = {
 			isa = PBXGroup;
 			children = (
-				3010573821D1650D003A4828 /* AppDelegate.swift */,
-				3010573A21D1650D003A4828 /* ViewController.swift */,
+				307AA38121D5990500053181 /* Supporting Files */,
+				307AA38021D598EC00053181 /* Controllers */,
+				307AA38221D5991D00053181 /* Model */,
+				307AA37C21D56E3300053181 /* Constants.swift */,
+				307AA37621D4098600053181 /* FoundationExtensions.swift */,
 				3010573C21D1650F003A4828 /* Assets.xcassets */,
 				3010573E21D1650F003A4828 /* Main.storyboard */,
+			);
+			path = Beaconing;
+			sourceTree = "<group>";
+		};
+		307AA38021D598EC00053181 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3010573A21D1650D003A4828 /* BeaconsController.swift */,
+				307AA37A21D42E4200053181 /* WindowController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		307AA38121D5990500053181 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3010573821D1650D003A4828 /* AppDelegate.swift */,
 				3010574121D1650F003A4828 /* Info.plist */,
 				3010574221D1650F003A4828 /* Beaconing.entitlements */,
 			);
-			path = Beaconing;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		307AA38221D5991D00053181 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				307AA37421D4094500053181 /* Beacon.swift */,
+				307AA37821D40A8100053181 /* BeaconManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +172,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3010573B21D1650D003A4828 /* ViewController.swift in Sources */,
+				307AA37721D4098600053181 /* FoundationExtensions.swift in Sources */,
+				307AA37B21D42E4200053181 /* WindowController.swift in Sources */,
+				3010573B21D1650D003A4828 /* BeaconsController.swift in Sources */,
 				3010573921D1650D003A4828 /* AppDelegate.swift in Sources */,
+				307AA37D21D56E3300053181 /* Constants.swift in Sources */,
+				307AA37921D40A8100053181 /* BeaconManager.swift in Sources */,
+				307AA37521D4094500053181 /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +315,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Beaconing/Beaconing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Beaconing/Supporting Files/Beaconing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Beaconing/Info.plist;
+				INFOPLIST_FILE = "Beaconing/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -289,10 +333,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Beaconing/Beaconing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Beaconing/Supporting Files/Beaconing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Beaconing/Info.plist;
+				INFOPLIST_FILE = "Beaconing/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
